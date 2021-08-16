@@ -27,9 +27,8 @@ public class Randoms implements Iterable<Integer> {
 
             @Override
             public Integer next() {
-                return random.ints(min, max+1)
-                        .findFirst()
-                        .getAsInt();
+                int randNumber = random.nextInt(max+1 - min) + min;
+                return randNumber;
             }
         };
     }
